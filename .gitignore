@@ -1,0 +1,88 @@
+# Node.js
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional Prettier cache
+.prettiercache
+
+# Optional Deno modules
+.deno/
+
+# Optional Parcel cache (as you are using Parcel)
+.parcel-cache/
+
+# Production build output
+# This is crucial for React projects bundled with tools like Parcel, Webpack, Create React App, Vite, Next.js, etc.
+# Adjust 'dist/' if your build output directory is named differently (e.g., 'build/', '.next/', 'out/')
+dist/
+build/
+.next/ # For Next.js projects
+out/   # For static site generators or Next.js static export
+
+# Editor directories and files
+.idea/ # IntelliJ IDEA
+.vscode/ # VS Code (often contains user-specific settings)
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store # macOS
+.env* # Environment variables (important for security)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv/ # Python virtual environments (if you mix Python/Node)
+
+# Testing directories and files
+/coverage # Jest/Vitest coverage reports
+/.nyc_output # Istanbul coverage reports
+/test-results # Jest/Vitest test results
+
+# Cypress
+# Cypress generates videos and screenshots of test runs.
+# These can take up a lot of space and are usually not committed.
+/cypress/videos/
+/cypress/screenshots/
+/cypress/results/ # If you generate custom reports
+
+# Storybook (if used)
+.storybook/out/
+
+# Netlify (if used)
+.netlify/
+
+# Vercel (if used)
+.vercel/
+
+# Thumbnails
+.thumbnails/
+
+# Other common temporary files
+*.tmp
+*.bak
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# User-specific configurations (e.g., local server settings)
+*.local
