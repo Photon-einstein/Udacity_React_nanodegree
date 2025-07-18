@@ -1,0 +1,3 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qnpm documentation page\\E$"}
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QEnhances test readability: Allows for highly expressive and human-readable test assertions (e.g., expect(foo).to.be.a('string');).\\E$"}
+{"rule":"EN_COMPOUNDS","sentence":"^\\QIdentifies potential bugs: Catches common mistakes and anti-patterns before runtime, improving code reliability.\\E$"}

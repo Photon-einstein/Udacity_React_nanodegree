@@ -22,7 +22,7 @@ jspm_packages/
 .eslintcache
 
 # Optional Prettier cache
-.prettiercache
+.prestorecache
 
 # Optional Deno modules
 .deno/
