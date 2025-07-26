@@ -1,0 +1,4 @@
+[submodule "1-React_exercises/React-Fundamentals-Exercises"]
+	path = 1-React_exercises/React-Fundamentals-Exercises
+	url = https://github.com/udacity/React-Fundamentals-Exercises
+	branch = react-19
