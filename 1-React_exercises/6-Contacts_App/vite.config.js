@@ -10,7 +10,7 @@ export default defineConfig({
   base: "./",
   server: {
     host: "0.0.0.0",
-    port: 3001,
+    port: 5001,
     strictPort: true,
     allowedHosts: ["localhost", ".prod.udacity-student-workspaces.com"],
     // Improve proxy configuration to handle all static assets
