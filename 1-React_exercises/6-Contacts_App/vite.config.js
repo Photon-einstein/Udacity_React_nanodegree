@@ -16,10 +16,10 @@ export default defineConfig({
     // Improve proxy configuration to handle all static assets
     proxy: {
       // Ensure all assets and module requests are properly rewritten
-      "^/proxy/3001/(.*)$": {
-        target: "http://localhost:3001",
+      "^/proxy/5001/(.*)$": {
+        target: "http://localhost:5001",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/proxy\/3001\//, "/"),
+        rewrite: (path) => path.replace(/^\/proxy\/5001\//, "/"),
       },
     },
   },

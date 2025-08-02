@@ -1,8 +1,14 @@
+import { useState } from "react";
 import "./App.css";
 import ListContacts from "./ListContacts";
 
 const App = () => {
-  const contacts = [
+  const removeContact = (contact) => {
+    setContacts(contacts.filter((c) => c.id !== contact.id));
+  };
+
+  /* state / function to set the state */
+  const [contacts, setContacts] = useState([
     {
       id: "karen",
       name: "Karen Isgrigg",
@@ -21,11 +27,11 @@ const App = () => {
       handle: "tylermcginnis",
       avatarURL: "http://localhost:5001/tyler.jpg",
     },
-  ];
+  ]);
 
   return (
     <div>
-      <ListContacts contacts={contacts} />
+      <ListContacts contacts={contacts} onDeleteContact={removeContact} />
     </div>
   );
 };
