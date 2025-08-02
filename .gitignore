@@ -86,3 +86,6 @@ out/   # For static site generators or Next.js static export
 
 # User-specific configurations (e.g., local server settings)
 *.local
+
+# Vscode related code
+*.vscode/
