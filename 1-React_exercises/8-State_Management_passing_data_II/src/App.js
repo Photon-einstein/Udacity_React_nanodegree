@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./logo.svg";
+import MovieUsers from "./movieUsers";
 
 // Display a list of movies where each movie contains a list of users that favorited it.
 // For detailed instructions, refer to Instructions.md.
@@ -122,14 +123,7 @@ const App = () => {
               {listUsers.length > 0 ? (
                 // This is the conditional rendering. If the list is not empty (length > 0),
                 // render the list of users.
-                <div>
-                  <p>Liked by:</p>
-                  <ul>
-                    {listUsers.map((user) => (
-                      <li key={user.id}>{user.name}</li>
-                    ))}
-                  </ul>
-                </div>
+                <MovieUsers listUsers={listUsers} />
               ) : (
                 // Otherwise, render a message that no one liked the movie.
                 <p>None of the current users liked this movie.</p>
