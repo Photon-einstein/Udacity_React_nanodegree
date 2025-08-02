@@ -93,7 +93,17 @@ const movies = {
   },
 };
 
+function returnListOfUsersByMovie(movie) {
+  const usersWhoFavorited = profiles.filter(
+    // Use strict equality and parseInt to compare string ID with number ID
+    (profile) => parseInt(profile.favoriteMovieID) === movie.id
+  );
+  // Return the full user objects, not just their IDs
+  return usersWhoFavorited.map((profile) => users[profile.userID]);
+}
+
 const App = () => {
+  const moviesArray = Object.values(movies);
   return (
     <div className="App">
       <header className="App-header">
@@ -101,6 +111,33 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>How Popular is Your Favorite Movie?</h2>
+
+      <ol>
+        {moviesArray.map((movie) => {
+          const listUsers = returnListOfUsersByMovie(movie);
+
+          return (
+            <li key={movie.id}>
+              <h3>{movie.name}</h3>
+              {listUsers.length > 0 ? (
+                // This is the conditional rendering. If the list is not empty (length > 0),
+                // render the list of users.
+                <div>
+                  <p>Liked by:</p>
+                  <ul>
+                    {listUsers.map((user) => (
+                      <li key={user.id}>{user.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                // Otherwise, render a message that no one liked the movie.
+                <p>None of the current users liked this movie.</p>
+              )}
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 };
